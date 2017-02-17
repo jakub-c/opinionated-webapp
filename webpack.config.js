@@ -9,4 +9,13 @@ module.exports = {
   devServer: {
     contentBase: './static'
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: [{loader: 'eslint-loader'}]
+      }
+    ]
+  }
 }
